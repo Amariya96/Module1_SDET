@@ -1,5 +1,17 @@
 ﻿
 using Basic_Program;
+
+Doctor doc = new Doctor();
+doc.AddNewDoctor(1, "Ele");
+doc.DisplayDoctorDetails();
+doc.ModifyDoctor(2, "Manu");
+doc.DisplayDoctorDetails();
+doc.BookApp(3, "Ravi");
+doc.DelApp("Ravi");
+
+
+
+
 /*
 EV ev = new();
 ev.Vehnum = 444;
@@ -18,7 +30,7 @@ Console.WriteLine(pv.setTypeForVeh());
 
 */
 
-
+/*
 
   Console.WriteLine("1. TS 2. NTS 3. SD");
 switch(Convert.ToInt32(Console.ReadLine()))
@@ -56,6 +68,6 @@ case 3:
         sd.DisplayCollegeDetails();
         break;
 }
-
+*/
 
 
