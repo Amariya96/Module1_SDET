@@ -1,6 +1,41 @@
 ﻿
 using Basic_Program;
 
+
+
+
+/*
+BankDetails bank = new BankDetails(1, 5465767687L, "Anu", "InActive");
+BankDetailsNew bank1 = new(1, 5465767687L, "Anu", "InActiveS");
+
+BankDetails.WelcomeMessage();
+
+Console.WriteLine("1. CustId 2. AccNo 3. Name");
+int ch= Convert.ToInt32(Console.ReadLine());
+switch(ch)
+{
+    case 1:
+        Console.WriteLine("CustId :");
+        bank1.GetAccDetails(Convert.ToInt32(Console.ReadLine()));
+        break;
+    case 2:
+        Console.WriteLine("AccNo :");
+        bank1.GetAccDetails(Convert.ToInt64(Console.ReadLine()));
+        break;
+    case 3:
+        Console.WriteLine("Name :");
+        bank1.GetAccDetails(Console.ReadLine());
+        break;
+        default: Console.WriteLine("Enter bet 1-3");
+        break;
+}
+BankDetails.ExitMessage();
+
+*/
+
+
+
+/*
 Doctor doc = new Doctor();
 doc.AddNewDoctor(1, "Ele");
 doc.DisplayDoctorDetails();

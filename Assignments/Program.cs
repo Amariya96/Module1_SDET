@@ -1,4 +1,21 @@
 ﻿using Assignments;
+
+Circle c = new Circle();
+c.Radius = 12;
+Rectangle r = new Rectangle();
+r.length = 10;
+r.breadth = 20;
+c.Draw();
+r.Draw();
+
+
+
+/*
+
+Employee emp= new Employee(1,"Anu", "Shaju", 9);
+emp.DisplayInfo();
+
+/*
 Console.WriteLine("1.Electronic product 2. Digital product 3. Clothing product");
 switch(Convert.ToInt32(Console.ReadLine()))
 {
@@ -20,3 +37,4 @@ switch(Convert.ToInt32(Console.ReadLine()))
         cp.DisplayClothingProducts();
         break;
 }
+*/
