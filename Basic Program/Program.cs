@@ -1,8 +1,16 @@
 ﻿
 using Basic_Program;
 
+GenericCollection gc = new GenericCollection();
+//gc.ListHandling();
+gc.DictionaryHandling();
 
-
+//NonGenericCollection nonGenericCollection = new NonGenericCollection();
+//nonGenericCollection.ArrayListHandling();
+//nonGenericCollection.StackHandling();
+//nonGenericCollection.QueueHandling();
+//nonGenericCollection.HashTableHandling();
+//nonGenericCollection.SortedListHandling();
 
 /*
 BankDetails bank = new BankDetails(1, 5465767687L, "Anu", "InActive");
