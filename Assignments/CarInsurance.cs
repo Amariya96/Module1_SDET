@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assignment
+namespace Assignments
 {
     internal class CarInsurance : InsurancePolicyAbs
     {

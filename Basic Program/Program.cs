@@ -1,7 +1,32 @@
 ﻿
 using Basic_Program;
+using Basic_Program.ExceptionMessages;
 
-GenericCollection gc = new GenericCollection();
+ExceptionHandling excep = new ExceptionHandling(10, 20);
+
+    //excep.Divide();
+    try
+    {
+        excep.Divide();
+    }
+    catch (ArithmeticException ex)
+    {
+        Console.WriteLine(MyExceptions.exmesslist["Div"]);
+    }
+    catch (IndexOutOfRangeException ex)
+    {
+        Console.WriteLine(MyExceptions.exmesslist["I"]);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(MyExceptions.exmesslist["U"]);
+    }
+    finally
+    {
+        Console.WriteLine("Done");
+    }
+
+/*GenericCollection gc = new GenericCollection();
 //gc.ListHandling();
 gc.DictionaryHandling();
 
