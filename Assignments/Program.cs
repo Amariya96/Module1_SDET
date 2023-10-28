@@ -1,4 +1,92 @@
 ﻿using Assignments;
+using Assignments.ExceptionMessages;
+MedicalHistory medicalHistory = new(123, 432, "Cold", "20-10-23");
+
+MedicalHistory medicalHistory1 = new(453, 1232, "Vomiting", "21-01-22");
+
+MedicalHistory medicalHistory2 = new(6783, 332, "Heart Attack", "13-03-21");
+int option, choice;
+do
+{
+
+    Console.WriteLine("1.Add Medical Details \n 2. View Patient Details\n 3.Exit Order");
+    Console.WriteLine("Choose option");
+    choice = Convert.ToInt32(Console.ReadLine());
+
+    switch (choice)
+    {
+        case 1:
+
+            MedicalHistory.MedicalHistoryDetails(medicalHistory1);
+            MedicalHistory.MedicalHistoryDetails(medicalHistory2);
+            MedicalHistory.MedicalHistoryDetails(medicalHistory);
+
+            break;
+
+        case 2:
+
+
+            MedicalHistory.ViewDetails();
+            break;
+
+        case 3:
+            Environment.Exit(0);
+            break;
+    }
+    Console.WriteLine("Do You Want To Continue Press 1 for continue");
+    option = Convert.ToInt32(Console.ReadLine());
+} while (option == 1);
+/*
+int option, choice;
+do
+{
+    Console.WriteLine("1.Add Patient \n 2. View Details \n 3. Exit");
+    Console.WriteLine("Choose Option");
+    choice = Convert.ToInt32(Console.ReadLine());
+    switch (choice)
+    {
+        case 1:
+            Console.WriteLine("Enter PatientId:");
+            int id = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Patient Name:");
+             string? name = Console.ReadLine();
+                        Console.WriteLine("Enter Age");
+                        int age = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter diagnosis");
+                        string? diagnosis = Console.ReadLine();
+                        Patient patient = new(id, name, age, diagnosis);
+                        patient.PatientDetails(patient);
+
+
+                        break;
+
+                    case 2:
+                        Patient.ViewDetails();
+                        break;
+
+                    case 3:
+                        Environment.Exit(0);
+                        break;
+                }
+            Console.WriteLine("Do You Want To Continue Press 1 for continue");
+               option = Convert.ToInt32(Console.ReadLine());
+            } while (option == 1);
+   
+/*
+MedicalRecord medicalRecord = new(111, 20000, 1201,null, 24, "HeadAche");
+try
+{
+    medicalRecord.Validate(medicalRecord);
+}
+catch(InvalidPatientRecordException pr)
+{
+    Console.WriteLine(pr.Message);
+}
+catch(InvalidMedicalRecordException dr)
+{
+    Console.WriteLine(dr.Message);
+}
+/*
 Patient patients = new(1, "Rahul", 19, "Fever");
 try
 {

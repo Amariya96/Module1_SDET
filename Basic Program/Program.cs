@@ -1,5 +1,17 @@
 ﻿
 using Basic_Program;
+FileOperations fo= new FileOperations();
+//fo.CreateFile();
+//fo.WriteData();
+//fo.ReadData();
+//fo.CopyMoveFile();
+//fo.DeleteFile();
+fo.FileProperties();
+
+
+
+
+/*
 using Basic_Program.ExceptionMessages;
 
 ExceptionHandling excep = new ExceptionHandling(10, 20);
