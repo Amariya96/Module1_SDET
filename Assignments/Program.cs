@@ -1,5 +1,25 @@
 ﻿using Assignments;
 using Assignments.ExceptionMessages;
+using static Assignments.Product;
+
+var typ1 = "MI";
+var typ2 = 1010;
+var typ3 = "OnePlus";
+Product<string>.AddProduct(1, ref typ1, 100, 2);
+Product<int>.AddProduct(2, ref typ2, 50, 3);
+Product<string>.UpdateProduct(1, typ3);
+Product<string>.DeleteProduct(2);
+Product<string>.SearchProduct(1);
+
+/*
+var typ1 = "single";
+var typ2 = 2;
+RoomReservation<string>.BookRoom(123, ref typ1);
+RoomReservation<int>.BookRoom(101, ref typ2);
+RoomReservation<string>.CancelRoom(101);
+
+
+/*
 MedicalHistory medicalHistory = new(123, 432, "Cold", "20-10-23");
 
 MedicalHistory medicalHistory1 = new(453, 1232, "Vomiting", "21-01-22");

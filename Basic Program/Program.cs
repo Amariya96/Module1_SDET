@@ -1,5 +1,21 @@
 ﻿
 using Basic_Program;
+using System.Text;
+
+GenExample<int> g1 = new GenExample<int>(10, 20);
+Console.WriteLine(g1.Val1 + " " + g1.Val2);
+
+GenExample<double> g2 = new GenExample<double>(20.87987897, 90.555767676);
+Console.WriteLine(g2.Val1 + " " + g2.Val2);
+
+GenExample<string?> g3 = new GenExample<string?>("HI", "Heloo");
+Console.WriteLine(g3.Val1 + " " + g3.Val2);
+
+GenExample<Boolean> g4 = new GenExample<Boolean>(false, true);
+Console.WriteLine(g4.Val1 + " " + g4.Val2);
+
+
+/*
 FileOperations fo= new FileOperations();
 //fo.CreateFile();
 //fo.WriteData();

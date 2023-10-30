@@ -16,7 +16,7 @@ namespace CaseStudy
 
         public void PlaceOrder()
         {
-            Console.WriteLine("Do you want to continue the order\n1.yes\n2.no");
+            Console.WriteLine("Do you want to continue the order\n1.Yes\n2.No");
             int option = Convert.ToInt32(Console.ReadLine());
             if (option == 1)
             {
@@ -47,7 +47,7 @@ namespace CaseStudy
         }
         public void DeliverProducts()
         {
-            Console.WriteLine("product is shipped and shipping cost is {0}", Weight * 10);
+            Console.WriteLine("Product is shipped and shipping cost is {0}", Weight * 10);
         }
     }
 }
