@@ -26,7 +26,7 @@ static void Swap<T>(ref T num1, ref T num2)
         }
         int n1 = 10, n2 =20;
         char c1 = 'a', c2 = 'B';
-        Swap<int>(ref n1,ref n2);
-        Swap<char>(ref c1, ref c2);
+       // Swap<int>(ref n1,ref n2);
+      //  Swap<char>(ref c1, ref c2);
     }
 }

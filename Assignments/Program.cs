@@ -1,4 +1,82 @@
 ﻿using Assignments;
+using System.Reflection;
+class Program
+{
+    public delegate double BonusCalculation(Employee emp);
+    public static void Main(string[] args)
+    {
+
+        BonusCalculation bon = Employee.BonusCalculation;
+        Employee emp = new Employee(1, "anu", 3);
+        Employee emp1 = new Employee(2, "ammu", 4);
+        Employee emp2 = new Employee(3, "achu", 5);
+
+        BonusCalculation bon2 = Employee.EmployeeCreate;
+        Console.WriteLine("Id :{0}\n Name :{1}\n Performance Rating: {2}\n Normal Bonus : {3}\n Retention Bonus: {4}\n", emp.EmployeeId, emp.EmployeeName, emp.PerformanceRating, bon(emp), bon2(emp));
+        Console.WriteLine("Id :{0}\n Name :{1}\n Performance Rating: {2}\n Normal Bonus : {3}\n Retention Bonus: {4}\n", emp1.EmployeeId, emp1.EmployeeName, emp1.PerformanceRating, bon(emp1), bon2(emp1));
+        Console.WriteLine("Id :{0}\n Name :{1}\n Performance Rating: {2}\n Normal Bonus : {3}\n Retention Bonus: {4}\n", emp2.EmployeeId, emp2.EmployeeName, emp2.PerformanceRating, bon(emp2), bon2(emp2));
+    }
+}
+/*
+class Program
+{
+
+    public delegate void EventNotification(HotelEvent eve);
+    static int capacity = 1997;
+    public static void Main(string[] args)
+    {
+        while (true)
+        {
+            HotelEvent eve = new HotelEvent();
+            Console.WriteLine("Enter the event name");
+            string? eventName = Console.ReadLine();
+            Console.WriteLine("Enter the event date");
+            string? eventDate = Console.ReadLine();
+            Console.WriteLine("Enter the Location");
+            string? eventLocation = Console.ReadLine();
+            eve.EventName = eventName;
+            eve.EventDate = eventDate;
+            eve.Location = eventLocation;
+            eve.Capacity = capacity;
+            if (capacity < 2000)
+            {
+                EventNotification notification = HotelEvent.EventNotification;
+                notification(eve);
+            }
+            else
+            {
+
+                EventNotification notify = HotelEvent.EventCapacity;
+                notify(eve);
+                Environment.Exit(0);
+
+            }
+            Console.WriteLine("Do you want to continue\n1.yes\n2.no");
+            int option = Convert.ToInt32(Console.ReadLine());
+            if (option == 1)
+            {
+                continue;
+            }
+            else if (option == 2)
+            {
+                Environment.Exit(0);
+
+
+            }
+            else
+            {
+                Console.WriteLine("Invalid option");
+            }
+        }
+    }
+
+}
+
+
+
+
+
+/*
 using Assignments.ExceptionMessages;
 using static Assignments.Product;
 

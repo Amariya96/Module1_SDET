@@ -1,7 +1,22 @@
 ﻿
 using Basic_Program;
 using System.Text;
+public delegate void Del1(string mess);
+public delegate void Del2();
+class Program
+{ 
 
+public static void Main(string[] args) {
+    Del1 dobj1 = DelEx.MethodA;
+        dobj1("Hoiiiiiiii");
+
+        DelEx delEx = new(10,20);
+        Del2 dobj2 = delEx.Add();
+
+}
+}
+
+/*
 GenExample<int> g1 = new GenExample<int>(10, 20);
 Console.WriteLine(g1.Val1 + " " + g1.Val2);
 
