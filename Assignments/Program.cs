@@ -1,4 +1,10 @@
 ﻿using Assignments;
+//TourismDestination.DestinationDetails();
+TouristDestination.Destinations();
+
+
+
+/*
 using System.Reflection;
 class Program
 {
