@@ -1,6 +1,40 @@
 ﻿using Assignments;
+TourPackage package = new TourPackage(1, "Kerala", "19-11-2029", 1000);
+TourPackage package1 = new TourPackage(2, "MP", "15-1-2027", 1400);
+TourPackage package2 = new TourPackage(3, "AP", "31-12-2026", 1500);
+
+TourPackage.tourPackages.Add(package1);
+TourPackage.tourPackages.Add(package2);
+TourPackage.tourPackages.Add(package);
+
+
+Thread thread = new Thread(TourPackage.HotelReservation);
+
+Thread thread1 = new Thread(TourPackage.HotelReservation);
+
+thread.Start();
+thread.Join();
+thread1.Start();
+/*
+    Hotel h1 = new Hotel("Taj", 4, "India", "Mumbai", 10);
+    Hotel h2 = new Hotel("Flammingo Inn", 5, "USA", "TVM", 9);
+    Console.WriteLine("Available rooms at Taj" + h1.AvailableRm);
+    Console.WriteLine("Available rooms at Flammingo Inn" + h2.AvailableRm);
+    await HotelBookingAsync(h1,4);
+    await HotelBookingAsync(h2, 4);
+Console.WriteLine("Available rooms at Taj" + h1.AvailableRm);
+Console.WriteLine("Available rooms at Flammingo Inn" + h2.AvailableRm);
+static async Task HotelBookingAsync(Hotel hotel, int requestedRm)
+{
+    await hotel.HotelBooking(requestedRm);
+}
+
+
+
+
+
 //TourismDestination.DestinationDetails();
-TouristDestination.Destinations();
+//TouristDestination.Destinations();
 
 
 
