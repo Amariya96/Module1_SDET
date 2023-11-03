@@ -1,4 +1,54 @@
 ﻿using Assignments;
+FamilyMember grandparent = new FamilyMember("Grandparent", 65);
+FamilyTree familyTree = new FamilyTree(grandparent);
+
+FamilyMember parent1 = new FamilyMember("Parent 1", 55);
+FamilyMember parent2 = new FamilyMember("Parent 2", 58);
+FamilyMember child1 = new FamilyMember("Child 1", 29);
+FamilyMember child2 = new FamilyMember("Child 2", 30);
+FamilyMember grandchild1 = new FamilyMember("Grandchild 1", 4);
+
+
+grandparent.AddChild(parent1);
+grandparent.AddChild(parent2);
+parent1.AddChild(child1);
+parent1.AddChild(child2);
+child1.AddChild(grandchild1);
+
+Console.WriteLine("Family Tree:");
+familyTree.DisplayFamilyTree();
+/*
+TaskItem ts = new TaskItem(1, "ttt", false);
+TaskItem ts1 = new TaskItem(2, "iii", true);
+TaskItem ts2 = new TaskItem(3, "wwww", true);
+TaskItem ts3 = new TaskItem(4, "oooo", false);
+
+TaskItem.TaskItems.Add(ts);
+TaskItem.TaskItems.Add(ts1);
+TaskItem.TaskItems.Add(ts2);
+TaskItem.TaskItems.Add(ts3);
+
+TaskItem.Display();
+Console.WriteLine(" Enter the id to change");
+int id = Convert.ToInt32(Console.ReadLine());
+var status = TaskItem.TaskItems.Find(x => x.TaskId == id);
+if (status != null)
+{
+    status.IsCompleted = true;
+    Console.WriteLine("Status has been changed");
+}
+else
+    Console.WriteLine("id not found");
+Console.WriteLine("Enter the id to remove Task");
+int remove = Convert.ToInt32(Console.ReadLine());
+TaskItem.TaskItems.RemoveAll(x => x.TaskId == remove);
+Console.WriteLine("Task removed succeessfully");
+
+Console.WriteLine("Total Tasks Are");
+TaskItem.FilteringTask();
+
+
+/*
 TourPackage package = new TourPackage(1, "Kerala", "19-11-2029", 1000);
 TourPackage package1 = new TourPackage(2, "MP", "15-1-2027", 1400);
 TourPackage package2 = new TourPackage(3, "AP", "31-12-2026", 1500);
